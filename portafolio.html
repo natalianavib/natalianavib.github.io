@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <title>Portafolio Natalia Navib</title>
+  <script>
+    let originalTitle = document.title;
+    let pageTitleChanged = false;
+
+    // Función para cambiar el título
+    function changeTitle(newTitle) {
+      document.title = newTitle;
+      pageTitleChanged = true;
+    }
+
+    // Función para detectar cambio de visibilidad de la página
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === 'hidden') {
+        if (!pageTitleChanged) {
+          changeTitle("¡No te vayas! </3");
+        }
+      } else {
+        if (pageTitleChanged) {
+          document.title = originalTitle;
+          pageTitleChanged = false;
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+
+
+
+<header class="header">
+  <div class="u-wrapper">
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Acerca de mí</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+  <section class="pre-projects">
+    <div class="u-wrapper">
+      <div class="pre-projects-content">
+        <p>A lo largo de mi carrera de Ingeniería en Informática, he tenido el privilegio de trabajar en proyectos retadores e increíbles</p>
+        <p >
+          Aquí hay algunos que me gustaría compartir.
+        </p>
+        <img src="images/icons/arrow-down.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="project-list">
+    <div class="u-wrapper">
+      <div class="project-list-content">
+        <article class="project">
+          <div class="project-description">
+            <h2 class="project-title tag">
+              <span>
+                ExploSur: Documentación de Diseño y Desarrollo de Soluciones
+              </span>
+            </h2>
+            <p class="project-copy">
+              Documentación con realización de proyecto desde una problematica con solución a la propuesta basada en investigación y levantamiento de requerimiento y diseño de interfaces.
+              Además incluye Arquitectura de la solución, almacenamiento y plan de pruebas
+            </p>
+            <div class="project-cta">
+
+              <a class="btn primary full" href="https://docs.google.com/document/d/16VIuYtl0uz62IS3mSzduX0YjxFPxI7HO/edit?usp=sharing&ouid=100902761258125720486&rtpof=true&sd=true">Ver proyecto</a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="images/explo.documentación.png" alt="">
+          </div>
+        </article>
+
+        </article>
+        <article class="project">
+          <div class="project-description">
+            <h2 class="project-title tag">
+              <span>
+                ExploSUR
+              </span>
+            </h2>
+            <p class="project-copy">
+              Aplicación hecha en Flutter basada en la solución del Diseño y desarrollo de soluciones.
+              App de Turismo basada en la Región del Ñuble, Chile. (aún en desarrollo).
+              Hecho con Android Studio, Flutter, Dart, Firebase.
+            </p>
+            <div class="project-cta">
+              <button class="btn secondary full">
+                <i>
+                  <img src="images/icons/github.svg" alt="">
+                </i>
+                <span>
+                  Ver código
+                </span>
+              </button>
+              
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="images/explo.jpeg" alt="">
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-description">
+            <h2 class="project-title tag">
+              <span>
+                App de Inventario
+              </span>
+            </h2>
+            <p class="project-copy">
+              App de inventario desarrollado en ramo de Ingeniería de Software
+              Hecho con Android Studio, java, firebase
+            </p>
+            <div class="project-cta">
+              <button class="btn secondary full">
+                <i>
+                  <img src="images/icons/github.svg" alt="">
+                </i>
+                <span>
+                  Ver código
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="images/inventario.jpeg" alt="">
+          </div>
+        </article>
+
+
+
+
+
+        <article class="project">
+            <div class="project-description">
+              <h2 class="project-title tag">
+                <span>
+                  Librería Django
+                </span>
+              </h2>
+              <p class="project-copy">
+                Proyecto de Librería en Backend con Django. 
+                Hecho con VsCode, django,
+              </p>
+              <div class="project-cta">
+                <button class="btn secondary full">
+                  <i>
+                    <img src="images/icons/github.svg" alt="">
+                  </i>
+                  <a href="https://github.com/natalianavib/libreria_django">
+                    Ver código
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div class="project-image">
+              <img src="images/back.PNG" alt="">
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-description">
+              <h2 class="project-title tag">
+                <span>
+                  John Videojuego 2D
+                </span>
+              </h2>
+              <p class="project-copy">
+                Proyecto de Taller de Videojuegos. 
+                Hecho con VisualStudio, C# 
+              </p>
+              <div class="project-cta">
+                <button  class="btn secondary full">
+                  <i>
+                    <img src="images/icons/github.svg" alt="">
+                  </i>
+                  <a href="https://github.com/natalianavib/EVS2Videojuegos">
+                    Ver código
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div class="project-image">
+              <img src="images/john.PNG" alt="">
+            </div>
+          </article>
+  
+
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+  
+  <footer class="footer">
+    
+
+    </div>
+    <p class="footer-message">
+      Hecho con ❤️ de Naty
+    </p>
+    <p class="footer-copyright">
+      Copyright 2024 - Todos los derechos reservados.
+    </p>
+
+  </footer>
+  <script>
+    const $form = document.querySelector('#form')
+    $form.addEventListener('submit', handleSubmit)
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      trucazo.setAttribute('href', `mailto:natalia.isabel.navarrete@gmail.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
+      trucazo.click()
+    }
+  </script>
+
+</body>
+</html>

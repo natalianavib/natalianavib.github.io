@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <title>Natalia Navib</title>
+  <script>
+    let originalTitle = document.title;
+    let pageTitleChanged = false;
+
+    // Función para cambiar el título
+    function changeTitle(newTitle) {
+      document.title = newTitle;
+      pageTitleChanged = true;
+    }
+
+    // Función para detectar cambio de visibilidad de la página
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === 'hidden') {
+        if (!pageTitleChanged) {
+          changeTitle("¡No te vayas! </3");
+        }
+      } else {
+        if (pageTitleChanged) {
+          document.title = originalTitle;
+          pageTitleChanged = false;
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+
+
+
+<header class="header">
+  <div class="u-wrapper">
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Acerca de mí</a></li>
+          <li><a href="portafolio.html">Portafolio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+  <section class="hero">
+    <div class="u-wrapper">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="images/nat.png" alt="">
+        </div>
+        <div class="hero-description">
+          <h1 class="h1">
+            <span class="h3">¡Hola!</span>
+            <span>Soy Natalia Navarrete</span>
+          </h1>
+          <p>Soy una estudiante de segundo año de Ingeniería en Informática en INACAP. Durante mi tiempo en INACAP, he adquirido un conjunto diverso de habilidades que me permiten navegar en el mundo de la informática de manera efectiva.</p> 
+          <p> Estoy certificada en áreas clave como desarrollo de aplicaciones básicas, diseño y gestión de bases de datos, diseño ágil de sistemas, soporte computacional y FULL STACK DEVELOPER.</p> 
+          <p>Me apasiona la tecnología y estoy decidida a seguir aprendiendo y creciendo en este campo dinámico. </p> 
+          <p> Mi objetivo es combinar mis habilidades técnicas con mi habilidad para resolver problemas y mi enfoque centrado en el usuario para crear soluciones innovadoras y efectivas.</p>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="social">
+      <a class="social-item" href="contacto.html">
+        <img src="images/icons/envelope.svg" alt="Icono de correo electrónico">
+      </a>
+    </div>
+    
+    <p class="footer-message">
+      Hecho con ❤️ de Naty
+    </p>
+    <p class="footer-copyright">
+      Copyright 2024 - Todos los derechos reservados.
+    </p>
+
+
+
+
+  </footer>
+  <script>
+    const $form = document.querySelector('#form')
+    $form.addEventListener('submit', handleSubmit)
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      trucazo.setAttribute('href', `mailto:natalia.isabel.navarrete@gmail.com?subject=${form.get('name')}${form.get('email')}&body=${form.get('message')}`)
+      trucazo.click()
+    }
+  </script>
+
+</body>
+</html>
